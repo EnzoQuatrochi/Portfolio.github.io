@@ -1,0 +1,278 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.tela1 img{
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 25px 0px 25px;
+}
+
+header .menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .menu li a{
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+header h1{
+    font-size: 70px;
+    color: aquamarine;
+}
+
+.tela1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 120px;
+    row-gap: 120px;
+    column-gap: 20px;
+
+    padding: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    border: solid black 4px;
+
+    justify-content: space-around;
+    justify-items: start;
+    align-items: center;
+}
+
+.tela1 h2{
+    font-size: 50px;
+    margin-bottom: 3px;
+}
+
+p.destaque{
+    font-size: 40px; 
+    font-weight: bold;
+    color: aquamarine;
+}
+
+.texto{
+    margin: 10px;
+    font-size: 21px;
+}
+
+.tela1 a{
+    padding: 15px 40px;
+    margin: 5px;
+    position: relative;
+    top: 40px;
+    border: solid black 3px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: aquamarine;
+}
+
+.sobre {
+    padding: 50px;
+    border: solid black 4px;
+    text-align: center; 
+}
+
+.sobre h2 {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.sobre p{
+    font-size: 22px;
+}
+
+.certificados{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0px;
+}
+
+.certificados img{
+    width: 537px;
+    height: auto;
+    border: 1px solid black;
+}
+
+span {
+    display: inline-block; 
+    height: 30px;
+    width: 30px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    margin: 30px 10px; 
+}
+
+.tela3{
+    margin-top: 100px;
+    padding: 50px 0px 50px 0px;
+}
+
+.tela3 h2{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.imagens{
+    max-width: 1100px;
+    max-height: 647px;
+    overflow: hidden;
+}
+
+.tela3 img{
+    width: 1150px;
+    height: 647px;
+}
+
+/*
+.slide:hover{
+    position: relative;
+    justify-content: center;
+    transform: scale(2.1);
+    z-index: 2;
+}
+*/
+
+.bloco h3{
+    font-size: 35px;
+    padding: 15px;
+}
+
+.bloco a{
+    color: aquamarine;
+}
+
+.bloco p{
+    font-size: 26px;
+    padding: 21px;
+}
+
+.projetos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.bloco{
+    border: solid black 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.manual-btn{
+    border: 2px solid rgb(0, 0, 0);
+    margin: 20px 5px;
+    padding: 0px 8px;
+    border-radius: 300px;
+    cursor: pointer;
+    transition: 0.75s;
+}
+
+.manual-btn:hover{
+    background-color: black;
+}
+
+.navigation {
+    position: relative;
+    top: 15px;
+    margin: 20px 0px;
+}
+
+#radio11:checked ~ .first,
+#radio21:checked ~ .first,
+#radio31:checked ~ .first{
+    display: flex;
+}
+
+#radio12:checked ~ .second,
+#radio22:checked ~ .second,
+#radio32:checked ~ .second{
+    display: flex;
+}
+
+#radio13:checked ~ .third,
+#radio23:checked ~ .third,
+#radio33:checked ~ .third{
+    display: flex;
+}
+
+#radio14:checked ~ .fourty,
+#radio24:checked ~ .fourty,
+#radio34:checked ~ .fourty{
+    display: flex;
+}
+
+#radio25:checked ~ .fivety,
+#radio35:checked ~ .fivety{
+    display: flex;
+}
+
+#radio26:checked ~ .sixty,
+#radio36:checked ~ .sixty{
+    display: flex;
+}
+
+.slide{
+    position: relative;
+    display: none;
+}
+
+.bloco input{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    height: auto;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: white;
+    padding: 20px 0px 20px 0px;
+
+    font-size: 25px;
+    font-style: italic;
+}
