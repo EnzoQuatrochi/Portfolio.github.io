@@ -25,6 +25,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0px 25px 0px 25px;
+    height: 65px;
 }
 
 header .menu{
@@ -38,11 +39,6 @@ header .menu li a{
     padding: 10px;
     color: white;
     text-decoration: none;
-}
-
-header h1{
-    font-size: 70px;
-    color: #3239FF;
 }
 
 .tela1{
@@ -127,136 +123,47 @@ span {
     margin: 30px 10px; 
 }
 
-.tela3{
-    margin-top: 100px;
-    padding: 50px 0px 50px 0px;
-}
-
-.tela3 h2{
-    font-size: 60px;
+.tela3 {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
 }
 
-.imagens{
-    max-width: 1100px;
-    max-height: 647px;
-    overflow: hidden;
-}
-
-.tela3 img{
-    width: 1150px;
-    height: 647px;
-}
-
-/*
-.slide:hover{
-    position: relative;
-    justify-content: center;
-    transform: scale(2.1);
-    z-index: 2;
-}
-*/
-
-.bloco h3{
-    font-size: 35px;
-    padding: 15px;
-}
-
-.bloco a{
-    color: #3239FF;
-}
-
-.bloco p{
-    font-size: 26px;
-    padding: 21px;
-}
-
-.projetos{
+.projetos {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+    border: solid black 4px;
+    padding: 50px;
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+    max-width: 1200px; 
+    width: 100%; 
 }
 
-.bloco{
-    border: solid black 4px;
+.projetos h2 {
+    grid-column: span 2; 
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
 
+.projetos div {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    padding: 20px;
-}
-
-.manual-btn{
-    border: 2px solid rgb(0, 0, 0);
-    margin: 20px 5px;
-    padding: 0px 8px;
-    border-radius: 300px;
-    cursor: pointer;
-    transition: 0.75s;
-}
-
-.manual-btn:hover{
-    background-color: black;
-}
-
-.navigation {
-    position: relative;
-    top: 15px;
-    margin: 20px 0px;
-}
-
-#radio11:checked ~ .first,
-#radio21:checked ~ .first,
-#radio31:checked ~ .first{
-    display: flex;
-}
-
-#radio12:checked ~ .second,
-#radio22:checked ~ .second,
-#radio32:checked ~ .second{
-    display: flex;
-}
-
-#radio13:checked ~ .third,
-#radio23:checked ~ .third,
-#radio33:checked ~ .third{
-    display: flex;
-}
-
-#radio14:checked ~ .fourty,
-#radio24:checked ~ .fourty,
-#radio34:checked ~ .fourty{
-    display: flex;
-}
-
-#radio25:checked ~ .fivety,
-#radio35:checked ~ .fivety{
-    display: flex;
-}
-
-#radio26:checked ~ .sixty,
-#radio36:checked ~ .sixty{
-    display: flex;
-}
-
-.slide{
-    position: relative;
-    display: none;
-}
-
-.bloco input{
-    display: none;
+    justify-content: center; 
+    align-items: center; 
+    height: 200px;
 }
 
 footer{
     width: 100%;
     background-color: black;
     height: auto;
+}
+
+.p a{
+    color: purple;
 }
 
 .footer{
@@ -275,3 +182,4 @@ footer p{
 
     font-size: 25px;
 }
+
