@@ -153,7 +153,24 @@ span {
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
-    height: 200px;
+    height: auto;
+}
+
+.projetos div h3{
+    font-size: 30px;
+    margin: 20px;
+    color: #3239FF;
+}
+
+.projetos div p{
+    font-size: 20px;
+    margin: 5px;
+    width: 90%;
+}
+
+.projetos div a{
+    font-size: 25px;
+    margin: 20px;
 }
 
 footer{
@@ -182,4 +199,3 @@ footer p{
 
     font-size: 25px;
 }
-
