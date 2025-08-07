@@ -1,3 +1,4 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
 *{
     margin: 0px;
     padding: 0px;
@@ -8,24 +9,24 @@ html {
     scroll-behavior: smooth;
 }
 
-.tela1 img{
-    height: 400px;
-    width: 400px;
-    border-radius: 100%;
+body {
+    overflow-x: hidden;
 }
 
-main{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* ===== HEADER ===== */
 header{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 25px 0px 25px;
-    height: 65px;
+    height: 85px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 header .menu{
@@ -39,40 +40,125 @@ header .menu li a{
     padding: 10px;
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.tela1{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 120px;
-    row-gap: 120px;
-    column-gap: 20px;
+header .menu li a:hover {
+    color: #3239FF;
+}
 
-    padding: 50px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+header .menu li a.active {
+    color: #00d4ff;
+    font-weight: bold;
+}
 
-    border: solid black 4px;
-
-    justify-content: space-around;
-    justify-items: start;
+/* ===== SEÇÕES DE TELA CHEIA ===== */
+.tela1, .tela2, .tela3 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* ===== GRADIENTES DE FUNDO ===== */
+.tela1 {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    color: white;
+    position: relative;
+}
+
+.tela1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.tela2 {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1f1f1f 50%, #0f0f0f 100%);
+    color: white;
+    position: relative;
+}
+
+.tela2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.tela3 {
+    background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 50%, #2a2a2a 100%);
+    color: white;
+    position: relative;
+}
+
+.tela3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* ===== SEÇÃO HOME ===== */
+.tela1 .cabeçalho {
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.tela1 img{
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    border: 3px solid #00d4ff;
+    box-shadow: 0 0 30px rgba(0,212,255,0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.tela1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0,212,255,0.5);
 }
 
 .tela1 h2{
     font-size: 50px;
     margin-bottom: 3px;
+    color: white;
 }
 
 p.destaque{
     font-size: 40px; 
     font-weight: bold;
-    color: #3239FF;
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0,212,255,0.5);
 }
 
 .texto{
     margin: 10px;
     font-size: 21px;
+    color: white;
 }
 
 .tela1 a{
@@ -80,25 +166,44 @@ p.destaque{
     margin: 5px;
     position: relative;
     top: 40px;
-    border: solid black 3px;
+    border: 2px solid #00d4ff;
     border-radius: 5px;
     font-size: 20px;
-    color: #3239FF;
+    color: #00d4ff;
+    background-color: rgba(0,212,255,0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
+.tela1 a:hover {
+    background-color: #00d4ff;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(0,212,255,0.5);
+}
+
+/* ===== SEÇÃO SOBRE ===== */
 .sobre {
     padding: 50px;
-    border: solid black 4px;
-    text-align: center; 
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin: 0 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .sobre h2 {
     font-size: 50px;
     margin-top: 10px;
+    color: white;
 }
 
 .sobre p{
     font-size: 22px;
+    color: white;
 }
 
 .certificados{
@@ -106,96 +211,186 @@ p.destaque{
     flex-direction: row;
     justify-content: space-around;
     margin: 20px 0px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .certificados img{
-    width: 537px;
+    width: 380px;
     height: auto;
-    border: 1px solid black;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.certificados img:hover {
+    transform: scale(1.05);
 }
 
 span {
     display: inline-block; 
     height: 30px;
     width: 30px;
-    background-color: #3239FF;
+    background-color: #00d4ff;
     border-radius: 100%;
-    margin: 30px 10px; 
+    margin: 30px 10px;
+    box-shadow: 0 0 15px rgba(0,212,255,0.5);
 }
 
-.tela3 {
-    display: flex;
-    justify-content: center;
-}
-
+/* ===== SEÇÃO PROJETOS ===== */
 .projetos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    border: solid black 4px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     padding: 50px;
     text-align: center;
-    margin: 100px 0px 100px 0px;
-    max-width: 1200px; 
-    width: 100%; 
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin: 50px 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .projetos h2 {
-    grid-column: span 2; 
+    grid-column: 1 / -1;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 50px;
+    color: white;
 }
 
 .projetos div {
-    border: 1px solid black;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
     height: auto;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.03);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.projetos div:hover {
+    transform: translateY(-10px);
 }
 
 .projetos div h3{
     font-size: 30px;
     margin: 20px;
-    color: #3239FF;
+    color: #00d4ff;
 }
 
 .projetos div p{
     font-size: 20px;
     margin: 5px;
     width: 90%;
+    color: white;
 }
 
 .projetos div a{
-    font-size: 25px;
-    margin: 20px;
+    font-size: 18px;
+    margin: 30px 10px 10px 10px;
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: rgba(0,212,255,0.1);
 }
 
-footer{
-    width: 100%;
-    background-color: black;
-    height: auto;
+.projetos div a:hover {
+    background-color: #00d4ff;
+    color: #2a2a2a;
+    box-shadow: 0 0 15px rgba(0,212,255,0.5);
 }
 
-.p a{
-    color: purple;
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .footer{
     max-width: 1200px;
     margin: 0 auto;
-
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     justify-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 footer p{
     color: white;
     padding: 20px 0px 20px 0px;
-
     font-size: 25px;
+}
+
+footer a {
+    color: #00d4ff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .tela1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .tela1 img {
+        height: 300px;
+        width: 300px;
+        margin-top: 20px;
+    }
+    
+    .certificados {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .certificados img {
+        width: 250px;
+    }
+    
+    .projetos {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+    
+    header .menu {
+        gap: 15px;
+    }
+    
+    header .menu li a {
+        font-size: 20px;
+    }
 }
