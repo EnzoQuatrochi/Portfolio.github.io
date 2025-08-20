@@ -1,4 +1,3 @@
-/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
 *{
     margin: 0px;
     padding: 0px;
@@ -44,23 +43,16 @@ header .menu li a{
 }
 
 header .menu li a:hover {
-    color: #3239FF;
-}
-
-header .menu li a.active {
     color: #00d4ff;
-    font-weight: bold;
 }
 
 /* ===== SEÇÕES DE TELA CHEIA ===== */
-.tela1, .tela2, .tela3 {
+.tela1, .tela2, .tela3, .tela4 {
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
     border: none;
 }
 
@@ -119,6 +111,8 @@ header .menu li a.active {
     pointer-events: none;
 }
 
+
+
 /* ===== SEÇÃO HOME ===== */
 .tela1 .cabeçalho {
     text-align: center;
@@ -129,8 +123,9 @@ header .menu li a.active {
 .tela1 img{
     height: 400px;
     width: 400px;
+    margin-left: 20px;
     border-radius: 100%;
-    border: 3px solid #00d4ff;
+    border: 2px solid #00d4ff;
     box-shadow: 0 0 30px rgba(0,212,255,0.3);
     transition: all 0.3s ease;
     position: relative;
@@ -310,7 +305,8 @@ span {
     box-shadow: 0 0 15px rgba(0,212,255,0.5);
 }
 
-/* ===== FOOTER ===== */
+/* ===== SEÇÃO CONTATO ===== */
+
 footer {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
     color: white;
@@ -332,32 +328,32 @@ footer::before {
     pointer-events: none;
 }
 
-.footer{
+.tela4{
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-items: center;
+    display: flex;
+    gap: 32px;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 
-footer p{
-    color: white;
+.tela4 p{
+    color: #00d4ff;
     padding: 20px 0px 20px 0px;
     font-size: 25px;
 }
 
-footer a {
-    color: #00d4ff;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
+.tela4 a{
     color: white;
 }
 
+.tela4 a#FooterLink{
+    font-style: italic;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+ 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
     .tela1 {
@@ -391,6 +387,15 @@ footer a:hover {
     }
     
     header .menu li a {
+        font-size: 20px;
+    }
+    
+    .tela4 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .tela4 p {
         font-size: 20px;
     }
 }
