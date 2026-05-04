@@ -116,7 +116,7 @@ header .menu li a:hover {
 /* ===== SEÇÃO HOME ===== */
 .tela1 .cabeçalho {
     text-align: center;
-    max-width: 600px;
+    max-width: 630px;
     padding: 0 20px;
 }
 
@@ -332,6 +332,7 @@ footer::before {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     gap: 32px;
     justify-content: center;
     text-align: center;
