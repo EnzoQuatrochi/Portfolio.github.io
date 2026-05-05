@@ -6,7 +6,8 @@
 
 html {
     scroll-behavior: smooth;
-}
+    scroll-snap-type: y mandatory;
+}   
 
 body {
     overflow-x: hidden;
@@ -15,7 +16,7 @@ body {
 /* ===== HEADER ===== */
 header{
     background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -31,12 +32,16 @@ header{
 header .menu{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
+}
+
+header ul{
+    margin: 0px 50px;
 }
 
 header .menu li a{
     font-size: 25px;
-    padding: 10px;
+    padding: 10px 0px;
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -44,6 +49,10 @@ header .menu li a{
 
 header .menu li a:hover {
     color: #00d4ff;
+}
+
+header.hidden {
+    transform: translateY(-100%);
 }
 
 /* ===== SEÇÕES DE TELA CHEIA ===== */
@@ -54,6 +63,9 @@ header .menu li a:hover {
     align-items: center;
     justify-content: center;
     border: none;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 /* ===== GRADIENTES DE FUNDO ===== */
@@ -111,8 +123,6 @@ header .menu li a:hover {
     pointer-events: none;
 }
 
-
-
 /* ===== SEÇÃO HOME ===== */
 .tela1 .cabeçalho {
     text-align: center;
@@ -156,7 +166,7 @@ p.destaque{
     color: white;
 }
 
-.tela1 a{
+.tela1 .cabeçalho a{
     padding: 15px 40px;
     margin: 5px;
     position: relative;
@@ -170,7 +180,7 @@ p.destaque{
     backdrop-filter: blur(10px);
 }
 
-.tela1 a:hover {
+.tela1 cabeçalho a:hover {
     background-color: #00d4ff;
     color: #1a1a1a;
     box-shadow: 0 0 20px rgba(0,212,255,0.5);
@@ -306,11 +316,10 @@ span {
 }
 
 /* ===== SEÇÃO CONTATO ===== */
-
 footer {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
     color: white;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +351,7 @@ footer::before {
 .tela4 p{
     color: #00d4ff;
     padding: 20px 0px 20px 0px;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .tela4 a{
@@ -353,6 +362,10 @@ footer::before {
     font-style: italic;
     text-decoration: underline;
     transition: color 0.3s ease;
+}
+
+.tela4 h1{
+    font-size: 65px;
 }
  
 /* ===== RESPONSIVIDADE ===== */
